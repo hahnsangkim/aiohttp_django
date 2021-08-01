@@ -14,13 +14,13 @@ Database <--> django server <--> async server <--> a bot at Telegram <--> a user
                     |_____________ registered ____________|
 ```
 
-### Endpoints at the django server
+#### Endpoints at the django server
 - api/v1/create_message
 - api/v1/get_message
 - api/v1/get_last_active_app_config
 
 
-### The Bot message structure in json
+#### The Bot message structure in json
 ```
 {
     "_": "Message",
@@ -65,7 +65,7 @@ Database <--> django server <--> async server <--> a bot at Telegram <--> a user
 ## Instruction
 Run the django server and the async server independently.
 
-## Prerequisite
+#### Prerequisite
 Two things to do include creating a bot and adding config info on the bot to the django server.
 
 - Go to _my.telegram.org/apps_ and get an api_id and an api_hash. (See Fig. 1)
@@ -79,13 +79,13 @@ Fig. 1: A snapshot of an app configuration at Telegram
 ![AppConfig at the django server](images/djangoappconfig.png)
 Fig. 2: A snapshot of an AppConfig object on the django server
 
-### Run docker compose
+#### Run docker compose
 ```shell
 (django_aiohttp) $ docker compose build
 (django_aiohttp) $ docker compose up
 ```
 
-### Alternate run
+#### Alternate run
 Instead of running docker containers, you can also run them locally
 ```shell
 $ pipenv shell --python=3
@@ -94,13 +94,13 @@ $ pipenv shell --python=3
 (django_aiohttp) $ python3 async_server
 ```
 
-### Open browsers to the django and async servers
+#### Open browsers to the django and async servers
 ```
 0.0.0.0:8001 for the django server
 0.0.0.0:5555 for the async server
 ```
 
-### Chat with your bot
+#### Chat with your bot
 Open your telegram app and chat with the bot you created.
 When you send 'new:hello' to the bot, the async recognizes it as a new message and then creates a post to the django server. The django server replies with an access token to the async server. The async server provides the corresponding id and access token to the bot and it replies to you.
 When you send the same message as the bot replied with, the django server fetches the message to the async server with it removed from the database. The async server provides the message to the bot.
