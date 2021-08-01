@@ -8,11 +8,11 @@ The app consists of a django server and an async server. The django server manag
 
 Below is shown the relations among the components.
 
+```
 Database <--> django server <--> async server <--> a bot at Telegram <--> a user
-
                     ^                                     ^
-                    
                     |_____________ registered ____________|
+```
 
 ### Endpoints at the django server
 - api/v1/create_message
@@ -135,5 +135,4 @@ Try to understand how the endpoints work on the django server side; open a shell
 - [AIOHTTP asyncio](https://docs.aiohttp.org/en/stable/)
 - [asyncio](https://docs.python.org/3/library/asyncio.html)
 - [asyncio walkthrough](https://realpython.com/async-io-python/)
-- [event loop](https://www.youtube.com/watch?v=mBtFGSC3ooA)
 - [use docker](https://www.docker.com/resources/what-container)
