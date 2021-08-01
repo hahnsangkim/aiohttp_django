@@ -27,7 +27,7 @@ class AsyncTelegramController:
         self.client_session = None
 
     async def gen_session(self):
-        return ClientSession(loop=self.loop)
+        return ClientSession(trust_env=True, loop=self.loop)
 
     async def get_config(self):
         session = await self.gen_session()

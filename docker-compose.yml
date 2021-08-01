@@ -1,0 +1,26 @@
+version: "3"
+
+services: 
+    async:
+        container_name: async.server
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes: 
+            - .:/app
+        ports: 
+            - 5555:5555
+        depends_on:
+            - django
+        command: python3 async_server.py
+
+    django:
+        container_name: django.server
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes: 
+            - .:/app
+        ports:
+            - 8001:8001
+        command: python3 manage.py runserver 0.0.0.0:8001
