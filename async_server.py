@@ -30,4 +30,4 @@ if __name__ == '__main__':
     application = web.Application()
     application.add_routes(routes)
     setup(application)
-    web.run_app(application, port=8888)
+    web.run_app(application, port=5555)

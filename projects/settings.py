@@ -26,7 +26,9 @@ SECRET_KEY = 'django-insecure-&=cu8)jn8ooq2h$j=y)t^g0ual)2*kdc5shif#ml=u78j8s2-1
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-DJANGO_SERVER_URL = 'http://127.0.0.1:8000/'
+DJANGO_SERVER_URL = 'http://localhost:8001/'
+# DJANGO_SERVER_URL = 'http://host.docker.internal:8001/'
+
 
 
 # Application definition
