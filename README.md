@@ -1,4 +1,4 @@
-# Django AIOHTTP Project
+# Django AIOHTTP Telegram
 This project consists of a django server and an async server. The django server manages messages and app configuraitons, while the async server handles messages coming from and responding to a bot.
 
 ## The Backend Architecture
