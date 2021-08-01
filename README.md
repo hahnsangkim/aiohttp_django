@@ -9,7 +9,9 @@ The app consists of a django server and an async server. The django server manag
 Below is shown the relations among the components.
 
 Database <--> django server <--> async server <--> a bot at Telegram <--> a user
+
                     ^                                     ^
+                    
                     |_____________ registered ____________|
 
 ### Endpoints at the django server
