@@ -62,20 +62,22 @@ Database <--> django server <--> async server <--> a bot at Telegram <--> a user
 }
 ```
 
+## Instruction
+Run the django server and the async server independently.
+
 ## Prerequisite
 Two things to do include creating a bot and adding config info on the bot to the django server.
 
-- Go to _my.telegram.org/apps_ and get an api_id and an api_hash.  
+- Go to _my.telegram.org/apps_ and get an api_id and an api_hash. (See Fig. 1)
 - Get a token to access the HTTP API from @botfather by sending _/newbot_ to _@botfather_
 - Get ready with parameters: api_id, api_hash, and bot_token
-- Set AppConfig at the django server to those parameters
+- Set AppConfig at the django server to those parameters (See Fig. 2)
 
 ![Configuration at the telegram bot](images/mytelegramapps.png)
+Fig. 1: A snapshot of an app configuration at Telegram
 
 ![AppConfig at the django server](images/djangoappconfig.png)
-
-## Instruction
-Run the django server and the async server independently.
+Fig. 2: A snapshot of an AppConfig object on the django server
 
 ### Run docker compose
 ```shell
