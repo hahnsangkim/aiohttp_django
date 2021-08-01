@@ -71,6 +71,7 @@ Two things to do include creating a bot and adding config info on the bot to the
 - Set AppConfig at the django server to those parameters
 
 ![Configuration at the telegram bot](images/mytelegramapps.png)
+
 ![AppConfig at the django server](images/djangoappconfig.png)
 
 ## Instruction
