@@ -1,7 +1,7 @@
 # Django AIOHTTP Project
-The app consists of a django server and an async server. The django server manages messages and app configuraitons, while the async server handles messages coming from and responding to a bot.
+This project consists of a django server and an async server. The django server manages messages and app configuraitons, while the async server handles messages coming from and responding to a bot.
 
-## Architecture
+## Backend Architecture
 - The django server as a message manager stores a message and delete the message if it's viewed. The django server also stores the configuration parameters for a bot.
 - The aync server is an interface between the django server and the bot. All the messages that the bot receive are sent to the django server asynchronously. 
 - The bot at Telegram responds to a user. It understands a message forming "keyword:strings", where the keyword includes 'new' currently. 
